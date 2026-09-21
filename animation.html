@@ -4,35 +4,52 @@
       <title>Question and Answer</title>
       <style>
 
-         body {
+        body {
             font-family: Calibri, sans-serif;
-            font-size: 3em;
-         }
+            font-size: 4em;
+            text-align: center;
+        }
 
-         #answer {
+        #answer {
             color: black;
             width: 100px;
 
             /* Part of your solution goes here */
+            position: absolute;
+            animation: name duration timing-function delay iteration-count direction fill-mode;
+            animation-name: moveFraction;
+            animation-duration: 3s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 1s;
+        }
 
-         }
+        /* moveFraction goes here */
+        @keyframes moveFraction {
+            0% {transform: translate(-355px, 60px); color: yellow; }
+            50% {transform: translate(0px, 60px);}
+            100% {transform: translate(0px, 0px); color: red; }
+        }
 
-         /* moveFraction goes here */
+        #question {
+            color: black;
+            background-color: aquamarine;
 
+            padding: 1px;
 
-         #question {
+            border-color: blueviolet;
+            border-radius: 10px;
+        }
+
+        #question:hover {
             /* Part of your solution goes here */
+            color: aliceblue;
+            background-color: rgb(106, 19, 19);
 
-         }
+        }
 
-         #question:hover {
-            /* Part of your solution goes here */
-
-         }
-
-         span {
+        span {
             display: inline-block;
-         }
+        }
 
       </style>
    </head>
